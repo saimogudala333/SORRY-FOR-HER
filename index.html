@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#ffe6f2;
+padding-top:100px;
+overflow:hidden;
+}
+
+#box{
+background:white;
+padding:30px;
+width:70%;
+margin:auto;
+border-radius:20px;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+font-size:16px;
+cursor:pointer;
+border:none;
+border-radius:10px;
+}
+
+#yes{
+background:#ff4d88;
+color:white;
+}
+
+#no{
+background:#cccccc;
+}
+
+h1{
+color:#ff4d88;
+}
+</style>
+</head>
+
+<body>
+
+<div id="box">
+
+<h1>Hey ❤️</h1>
+
+<p id="text">
+I know you're upset with me...
+</p>
+
+<button onclick="nextMessage()">Continue</button>
+
+<div id="final" style="display:none;">
+
+<button id="yes" onclick="forgive()">
+❤️ Forgive Me
+</button>
+
+<button id="no" onmouseover="runAway()">
+😤 Still Angry
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+let step=0;
+
+function nextMessage(){
+
+step++;
+
+if(step==1){
+document.getElementById("text").innerHTML=
+"First of all, I'm really sorry.";
+}
+
+else if(step==2){
+document.getElementById("text").innerHTML=
+"You mean a lot to me and I hate making you sad.";
+}
+
+else if(step==3){
+document.getElementById("text").innerHTML=
+"I made this page because a simple text didn't feel enough ❤️";
+}
+
+else{
+document.getElementById("final").style.display="block";
+}
+}
+
+function forgive(){
+
+document.body.innerHTML=
+"<h1>YAY ❤️</h1><h2>Thank you for forgiving me 😭</h2>";
+}
+
+function runAway(){
+
+let btn=document.getElementById("no");
+
+btn.style.position="absolute";
+
+btn.style.left=
+Math.random()*500+"px";
+
+btn.style.top=
+Math.random()*500+"px";
+}
+
+</script>
+
+</body>
+</html>
