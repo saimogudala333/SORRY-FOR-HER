@@ -9,7 +9,6 @@ font-family:Arial;
 text-align:center;
 background:#ffe6f2;
 padding-top:50px;
-overflow-x:hidden;
 }
 
 #box{
@@ -62,7 +61,7 @@ margin-bottom:20px;
 I know kannaluooo , badhapettisanuoo ninnuoo ☹️☹️
 </p>
 
-<button onclick="nextMessage()">DHADEL</button>
+<button id="mainBtn" onclick="nextMessage()">DHADEL</button>
 
 <div id="final" style="display:none;">
 
@@ -92,7 +91,6 @@ document.getElementById("slidePic").src="pic2";
 
 document.getElementById("text").innerHTML=
 "First of all , im really really sorry bujjammaw 🥺 ,, i know these days i am getting up ur nerves kanna and i really want to take up responsibilty and manchiga chusukovali ani anukuntunna kannamaw , yes ill listen to u , ill be patient , i wont get chirak on uh , i will never in my life shout on uh kannamaw , i wont cry waaaaaa waaaaaa ani when u say something that is hurting ill give reassurance cutie ❤️🎀 ";
-
 }
 
 else if(step==2){
@@ -101,7 +99,6 @@ document.getElementById("slidePic").src="pic3";
 
 document.getElementById("text").innerHTML=
 "I really do love you sm bujjammaw , i will try to understand u moree kannamaw, nuv em cheppina i do take it to my hea🙈❤️";
-
 }
 
 else if(step==3){
@@ -110,45 +107,34 @@ document.getElementById("slidePic").src="pic4";
 
 document.getElementById("text").innerHTML=
 "Idi neekosame chesane mooonpie because a simple sorry didn't feel enough kannamaw , and u do really matter to me kannamaw 🥺🎀🫂❤️";
-
 }
 
 else{
 
 document.getElementById("slidePic").src="pic5";
 
-document.getElementById("final").style.display="block";
+document.getElementById("text").innerHTML=
+"Moonpie 🥺❤️";
 
+document.getElementById("mainBtn").style.display="none";
+
+document.getElementById("final").style.display="block";
 }
 
 }
 
 function forgive(){
 
-document.body.innerHTML = `
+document.getElementById("slidePic").src="pic14";
 
-<h1>YAYYYYYYYYYYYYYYYYYY OPPESUKUNDIIIIIIIII❤️</h1>
+document.getElementById("text").innerHTML=
+"NAKU TELUSE BUJJIEMUNDAW U WILL FORGIVE ME ANI ❤️😭🫂<br><br>U CAN ALWAYS TRUST ME BUJJAMMAW ❤️<br><br>ILL FIGHT FOR US ❤️<br><br>U ARE REALLY IMPORTANT FOR ME KANNAMAW ❤️<br><br>U DESERVE ALL THE LOVE KANNAMAW 😭🫂❤️";
 
-<img src="pic14">
-
-<h2>
-NAKU TELUSE BUJJIEMUNDAW U WILL FORGIVE ME ANI ❤️😭🫂
-<br><br>
-U CAN ALWAYS TRUST ME BUJJAMMAW ❤️
-<br><br>
-ILL FIGHT FOR US ❤️
-<br><br>
-U ARE REALLY IMPORTANT FOR ME KANNAMAW ❤️
-<br><br>
-U DESERVE ALL THE LOVE KANNAMAW 😭🫂❤️
-</h2>
-
-`;
+document.getElementById("final").style.display="none";
 
 }
 
-let memoryPics = [
-"pic5",
+let dengeyPics = [
 "pic6",
 "pic7",
 "pic8",
@@ -159,71 +145,40 @@ let memoryPics = [
 "pic13"
 ];
 
-let memoryTexts = [
-"Sare... kopam ga undu 🥺❤️",
-"Kani idi gurthundha moonpie? ❤️",
+let dengeyMessages = [
+"Sare moonpie... kopam ga undu 🥺❤️",
+"Kani idi gurthundha? ❤️",
 "Idi chusi navvavu kada 😭❤️",
 "Na favourite memory idi ❤️",
-"Manam entha cute oo chudu 🥺",
-"Nuvvu naa favourite person ❤️",
+"Nuvvu na favourite person ❤️",
 "Please inka konchem chudu 🥺",
 "Nuvvu naaku chala important ❤️",
-"One last thing moonpie... 🥺❤️"
+"One last thing moonpie 🥺❤️"
 ];
 
-let currentMemory = 0;
+let dengeyStep = 0;
 
 function dengey(){
 
-document.body.innerHTML = `
+if(dengeyStep < dengeyPics.length){
 
-<h1>DONGA MOONPIE 😭❤️</h1>
+document.getElementById("slidePic").src =
+dengeyPics[dengeyStep];
 
-<img id="memoryPic"
-src="${memoryPics[0]}">
+document.getElementById("text").innerHTML =
+dengeyMessages[dengeyStep];
 
-<h2 id="memoryText">
-${memoryTexts[0]}
-</h2>
-
-<button onclick="nextMemory()">
-➡️ NEXT
-</button>
-
-`;
-
-}
-
-function nextMemory(){
-
-currentMemory++;
-
-if(currentMemory < memoryPics.length){
-
-document.getElementById("memoryPic").src =
-memoryPics[currentMemory];
-
-document.getElementById("memoryText").innerHTML =
-memoryTexts[currentMemory];
+dengeyStep++;
 
 }
 else{
 
-document.body.innerHTML = `
+document.getElementById("slidePic").src="pic14";
 
-<h1>MOONPIE 🥺❤️</h1>
+document.getElementById("text").innerHTML=
+"MOONPIE 🥺❤️<br><br>I KNOW I MESS UP SOMETIMES...<br><br>BUT I REALLY REALLY LOVE YOU ❤️<br><br>PLEASE GIVE ME ONE MORE CHANCE 🥺🫂❤️";
 
-<img src="pic14">
-
-<h2>
-I KNOW I MESS UP SOMETIMES...
-<br><br>
-BUT I REALLY REALLY LOVE YOU ❤️
-<br><br>
-PLEASE GIVE ME ONE MORE CHANCE 🥺🫂❤️
-</h2>
-
-`;
+document.getElementById("final").style.display="none";
 
 }
 
