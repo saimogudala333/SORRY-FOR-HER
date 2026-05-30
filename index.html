@@ -8,8 +8,8 @@ body{
 font-family:Arial;
 text-align:center;
 background:#ffe6f2;
-padding-top:100px;
-overflow:hidden;
+padding-top:50px;
+overflow-x:hidden;
 }
 
 #box{
@@ -41,6 +41,12 @@ background:#cccccc;
 h1{
 color:#ff4d88;
 }
+
+img{
+border-radius:20px;
+margin-bottom:20px;
+max-width:300px;
+}
 </style>
 </head>
 
@@ -49,6 +55,8 @@ color:#ff4d88;
 <div id="box">
 
 <h1>SORRY MOONPIE🥺❤️</h1>
+
+<img id="slidePic" src="pic1">
 
 <p id="text">
 I know kannaluooo , badhapettisanuoo ninnuoo ☹️☹️
@@ -62,7 +70,7 @@ I know kannaluooo , badhapettisanuoo ninnuoo ☹️☹️
 ❤️ FORGIVE BUJJIEBABU
 </button>
 
-<button id="no" onmouseover="runAway()">
+<button id="no" onclick="dengey()">
 😤 DENGEY
 </button>
 
@@ -79,42 +87,102 @@ function nextMessage(){
 step++;
 
 if(step==1){
+
+document.getElementById("slidePic").src="pic2";
+
 document.getElementById("text").innerHTML=
 "First of all , im really really sorry bujjammaw 🥺 ,, i know these days i am getting up ur nerves kanna and i really want to take up responsibilty and manchiga chusukovali ani anukuntunna kannamaw , yes ill listen to u , ill be patient , i wont get chirak on uh , i will never in my life shout on uh kannamaw , i wont cry waaaaaa waaaaaa ani when u say something that is hurting ill give reassurance cutie ❤️🎀 ";
 }
 
 else if(step==2){
+
+document.getElementById("slidePic").src="pic3";
+
 document.getElementById("text").innerHTML=
 "I really do love you sm bujjammaw , i will try to understand u moree kannamaw, nuv em cheppina i do take it to my hea🙈❤️";
 }
 
 else if(step==3){
+
+document.getElementById("slidePic").src="pic4";
+
 document.getElementById("text").innerHTML=
 "Idi neekosame chesane mooonpie because a simple sorry didn't feel enough kannamaw , and u do really matter to me kannamaw 🥺🎀🫂❤️";
 }
 
 else{
+
+document.getElementById("slidePic").src="pic5";
+
 document.getElementById("final").style.display="block";
 }
+
 }
 
 function forgive(){
 
-document.body.innerHTML=
-"<h1>YAYYYYYYYYYYYYYYYYYY OPPESUKUNDIIIIIIIII❤️</h1><h2>NAKU TELUSE BUJJIEMUNDAW U WILL FORGIVE ME ANI , U CAN ALWAYS TRUST ME BUJJAMMAW , ILL FIGHT FOR US AND U ARE REALLY IMPORTANT FOR ME KANNAMAW,U DESERVE ALL THE LOVE KANNAMAW😭🫂❤️</h2>";
+document.body.innerHTML=`
+
+<h1>YAYYYYYYYYYYYYYYYYYY OPPESUKUNDIIIIIIIII❤️</h1>
+
+<img src="pic14">
+
+<h2>
+NAKU TELUSE BUJJIEMUNDAW U WILL FORGIVE ME ANI ❤️😭🫂
+<br><br>
+U CAN ALWAYS TRUST ME BUJJAMMAW ❤️
+<br><br>
+ILL FIGHT FOR US ❤️
+<br><br>
+U ARE REALLY IMPORTANT FOR ME KANNAMAW ❤️
+<br><br>
+U DESERVE ALL THE LOVE KANNAMAW 😭🫂❤️
+</h2>
+
+`;
+
 }
 
-function runAway(){
+function dengey(){
 
-let btn=document.getElementById("no");
+document.body.innerHTML=`
 
-btn.style.position="absolute";
+<h1>DONGA MOONPIE 😭❤️</h1>
 
-btn.style.left=
-Math.random()*500+"px";
+<h2>
+Sare sare kopam ga undu...
+kani first memories chudu 🥺❤️
+</h2>
 
-btn.style.top=
-Math.random()*500+"px";
+<div style="
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+">
+
+<img src="pic5">
+<img src="pic6">
+<img src="pic7">
+<img src="pic8">
+<img src="pic9">
+<img src="pic100">
+<img src="pic11">
+<img src="pic12">
+<img src="pic13">
+
+</div>
+
+<br>
+
+<h2>
+Nuvvu naaku entha important oo cheppadaniki words saripovu moonpie ❤️🥺
+<br><br>
+Every photo here means a lot to me ❤️
+</h2>
+
+`;
+
 }
 
 </script>
