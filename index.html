@@ -9,6 +9,7 @@ font-family:Arial;
 text-align:center;
 background:#ffe6f2;
 padding-top:50px;
+overflow-x:hidden;
 }
 
 #box{
@@ -42,7 +43,7 @@ color:#ff4d88;
 }
 
 img{
-max-width:320px;
+max-width:350px;
 border-radius:20px;
 margin-bottom:20px;
 }
@@ -61,7 +62,7 @@ margin-bottom:20px;
 I know kannaluooo , badhapettisanuoo ninnuoo ☹️☹️
 </p>
 
-<button id="mainBtn" onclick="nextMessage()">DHADEL</button>
+<button onclick="nextMessage()">DHADEL</button>
 
 <div id="final" style="display:none;">
 
@@ -69,7 +70,7 @@ I know kannaluooo , badhapettisanuoo ninnuoo ☹️☹️
 ❤️ FORGIVE BUJJIEBABU
 </button>
 
-<button id="no" onclick="dengey()">
+<button id="no" onclick="runAway()">
 😤 DENGEY
 </button>
 
@@ -79,7 +80,7 @@ I know kannaluooo , badhapettisanuoo ninnuoo ☹️☹️
 
 <script>
 
-let step = 0;
+let step=0;
 
 function nextMessage(){
 
@@ -113,11 +114,6 @@ else{
 
 document.getElementById("slidePic").src="pic5";
 
-document.getElementById("text").innerHTML=
-"Moonpie 🥺❤️";
-
-document.getElementById("mainBtn").style.display="none";
-
 document.getElementById("final").style.display="block";
 }
 
@@ -125,12 +121,16 @@ document.getElementById("final").style.display="block";
 
 function forgive(){
 
-document.getElementById("slidePic").src="pic14";
+document.body.innerHTML=
+`
+<h1>YAYYYYYYYYYYYYYYYYYY OPPESUKUNDIIIIIIIII❤️</h1>
 
-document.getElementById("text").innerHTML=
-"NAKU TELUSE BUJJIEMUNDAW U WILL FORGIVE ME ANI ❤️😭🫂<br><br>U CAN ALWAYS TRUST ME BUJJAMMAW ❤️<br><br>ILL FIGHT FOR US ❤️<br><br>U ARE REALLY IMPORTANT FOR ME KANNAMAW ❤️<br><br>U DESERVE ALL THE LOVE KANNAMAW 😭🫂❤️";
+<img src="pic14">
 
-document.getElementById("final").style.display="none";
+<h2>
+NAKU TELUSE BUJJIEMUNDAW U WILL FORGIVE ME ANI , U CAN ALWAYS TRUST ME BUJJAMMAW , ILL FIGHT FOR US AND U ARE REALLY IMPORTANT FOR ME KANNAMAW,U DESERVE ALL THE LOVE KANNAMAW😭🫂❤️
+</h2>
+`;
 
 }
 
@@ -145,41 +145,17 @@ let dengeyPics = [
 "pic13"
 ];
 
-let dengeyMessages = [
-"Sare moonpie... kopam ga undu 🥺❤️",
-"Kani idi gurthundha? ❤️",
-"Idi chusi navvavu kada 😭❤️",
-"Na favourite memory idi ❤️",
-"Nuvvu na favourite person ❤️",
-"Please inka konchem chudu 🥺",
-"Nuvvu naaku chala important ❤️",
-"One last thing moonpie 🥺❤️"
-];
+let dengeyIndex = 0;
 
-let dengeyStep = 0;
-
-function dengey(){
-
-if(dengeyStep < dengeyPics.length){
+function runAway(){
 
 document.getElementById("slidePic").src =
-dengeyPics[dengeyStep];
+dengeyPics[dengeyIndex];
 
-document.getElementById("text").innerHTML =
-dengeyMessages[dengeyStep];
+dengeyIndex++;
 
-dengeyStep++;
-
-}
-else{
-
-document.getElementById("slidePic").src="pic14";
-
-document.getElementById("text").innerHTML=
-"MOONPIE 🥺❤️<br><br>I KNOW I MESS UP SOMETIMES...<br><br>BUT I REALLY REALLY LOVE YOU ❤️<br><br>PLEASE GIVE ME ONE MORE CHANCE 🥺🫂❤️";
-
-document.getElementById("final").style.display="none";
-
+if(dengeyIndex >= dengeyPics.length){
+dengeyIndex = 0;
 }
 
 }
