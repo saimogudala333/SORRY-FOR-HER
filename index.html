@@ -43,9 +43,9 @@ color:#ff4d88;
 }
 
 img{
+max-width:320px;
 border-radius:20px;
 margin-bottom:20px;
-max-width:300px;
 }
 </style>
 </head>
@@ -80,7 +80,7 @@ I know kannaluooo , badhapettisanuoo ninnuoo ☹️☹️
 
 <script>
 
-let step=0;
+let step = 0;
 
 function nextMessage(){
 
@@ -92,6 +92,7 @@ document.getElementById("slidePic").src="pic2";
 
 document.getElementById("text").innerHTML=
 "First of all , im really really sorry bujjammaw 🥺 ,, i know these days i am getting up ur nerves kanna and i really want to take up responsibilty and manchiga chusukovali ani anukuntunna kannamaw , yes ill listen to u , ill be patient , i wont get chirak on uh , i will never in my life shout on uh kannamaw , i wont cry waaaaaa waaaaaa ani when u say something that is hurting ill give reassurance cutie ❤️🎀 ";
+
 }
 
 else if(step==2){
@@ -100,6 +101,7 @@ document.getElementById("slidePic").src="pic3";
 
 document.getElementById("text").innerHTML=
 "I really do love you sm bujjammaw , i will try to understand u moree kannamaw, nuv em cheppina i do take it to my hea🙈❤️";
+
 }
 
 else if(step==3){
@@ -108,6 +110,7 @@ document.getElementById("slidePic").src="pic4";
 
 document.getElementById("text").innerHTML=
 "Idi neekosame chesane mooonpie because a simple sorry didn't feel enough kannamaw , and u do really matter to me kannamaw 🥺🎀🫂❤️";
+
 }
 
 else{
@@ -115,13 +118,14 @@ else{
 document.getElementById("slidePic").src="pic5";
 
 document.getElementById("final").style.display="block";
+
 }
 
 }
 
 function forgive(){
 
-document.body.innerHTML=`
+document.body.innerHTML = `
 
 <h1>YAYYYYYYYYYYYYYYYYYY OPPESUKUNDIIIIIIIII❤️</h1>
 
@@ -143,45 +147,85 @@ U DESERVE ALL THE LOVE KANNAMAW 😭🫂❤️
 
 }
 
+let memoryPics = [
+"pic5",
+"pic6",
+"pic7",
+"pic8",
+"pic9",
+"pic100",
+"pic11",
+"pic12",
+"pic13"
+];
+
+let memoryTexts = [
+"Sare... kopam ga undu 🥺❤️",
+"Kani idi gurthundha moonpie? ❤️",
+"Idi chusi navvavu kada 😭❤️",
+"Na favourite memory idi ❤️",
+"Manam entha cute oo chudu 🥺",
+"Nuvvu naa favourite person ❤️",
+"Please inka konchem chudu 🥺",
+"Nuvvu naaku chala important ❤️",
+"One last thing moonpie... 🥺❤️"
+];
+
+let currentMemory = 0;
+
 function dengey(){
 
-document.body.innerHTML=`
+document.body.innerHTML = `
 
 <h1>DONGA MOONPIE 😭❤️</h1>
 
-<h2>
-Sare sare kopam ga undu...
-kani first memories chudu 🥺❤️
+<img id="memoryPic"
+src="${memoryPics[0]}">
+
+<h2 id="memoryText">
+${memoryTexts[0]}
 </h2>
 
-<div style="
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-">
+<button onclick="nextMemory()">
+➡️ NEXT
+</button>
 
-<img src="pic5">
-<img src="pic6">
-<img src="pic7">
-<img src="pic8">
-<img src="pic9">
-<img src="pic100">
-<img src="pic11">
-<img src="pic12">
-<img src="pic13">
+`;
 
-</div>
+}
 
-<br>
+function nextMemory(){
+
+currentMemory++;
+
+if(currentMemory < memoryPics.length){
+
+document.getElementById("memoryPic").src =
+memoryPics[currentMemory];
+
+document.getElementById("memoryText").innerHTML =
+memoryTexts[currentMemory];
+
+}
+else{
+
+document.body.innerHTML = `
+
+<h1>MOONPIE 🥺❤️</h1>
+
+<img src="pic14">
 
 <h2>
-Nuvvu naaku entha important oo cheppadaniki words saripovu moonpie ❤️🥺
+I KNOW I MESS UP SOMETIMES...
 <br><br>
-Every photo here means a lot to me ❤️
+BUT I REALLY REALLY LOVE YOU ❤️
+<br><br>
+PLEASE GIVE ME ONE MORE CHANCE 🥺🫂❤️
 </h2>
 
 `;
+
+}
 
 }
 
